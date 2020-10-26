@@ -36,3 +36,13 @@ public func assertEqual<A: Equatable, B: Equatable>(_ lhs: (A, B), _ rhs: (A, B)
 public var __: Void {
     print("--")
 }
+
+
+// Increment
+//
+public func incr(_ x: Int) -> Int { x + 1 }
+
+
+// Square
+//
+public func square(_ x: Int) -> Int { x * x }

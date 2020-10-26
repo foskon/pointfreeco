@@ -2,8 +2,8 @@
 
 echo "Running post-commit hook"
 
-# PATH to the repository of interest
-export PATH=$PATH:/Users/cmanzanas/Documents/Projects/hwsui/.git/hooks
+# # PATH to the repository of interest
+# export PATH=$PATH:/Users/cmanzanas/Documents/Projects/hwsui/.git/hooks
 
 toplevel_path=`git rev-parse --show-toplevel`
 toplevel_dir=`basename "$toplevel_path"`
@@ -13,7 +13,7 @@ branch=`git rev-parse --abbrev-ref HEAD`
 # this variable holds the actual commit message
 subject=`git log --pretty=format:%s -n1`
 # this variables adds some hashtags to your tweet "#code #(name of your repo)"
-hashtags="Repository: #$toplevel_dir"
+hashtags="Repository: $toplevel_dir"
 #the tweet itself is thee hashtags plus the branch name plus the commit message
 tweet=$hashtags' ['$branch']: "'$subject'"'
 
